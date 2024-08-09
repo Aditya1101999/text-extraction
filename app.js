@@ -47,8 +47,6 @@ app.post('/upload', upload.fields([{ name: 'pdf' }, { name: 'image' }]), async (
     }
 });
 
-app.listen(3000, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
+app.listen(3000)
 
 module.exports = app
