@@ -4,7 +4,7 @@ This project is a Python-based tool that extracts key information from invoice P
 
 ## Features
 
-- **PDF Text Extraction:** Extracts text from PDF files using PyMuPDF (`fitz`).
+- **PDF Text Extraction:** Extracts text from PDF files using pdfplumber.
 - **Google Gemini API Integration:** Processes the extracted text to extract specific details such as customer information, product details, and total amount.
 - **JSON Output:** The tool provides the extracted details in both text and JSON formats.
 
@@ -23,8 +23,7 @@ This project is a Python-based tool that extracts key information from invoice P
 First, clone the repository to your local machine and navigate into the project directory:
 
 ```bash
-git clone https://github.com/your-username/invoice-details-extractor.git
-cd invoice-details-extractor
+git https://github.com/Aditya1101999/text-extraction.git
 ```
 
 ### 2. Install Dependencies

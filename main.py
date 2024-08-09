@@ -16,28 +16,25 @@ def give_details(text):
 
     {text}
 
-    Please extract the following details:
+    Please extract the following details only:
     - Customer Details
     - Products
     - Total Amount
 
-    Provide the data in JSON format.
     """
     
     # Use the appropriate method to generate content
-    response = genai.generate_text(model="gemini-1.5-flash", prompt=prompt)
-    
+    model = genai.GenerativeModel("gemini-1.5-flash")
+    response = model.generate_content(prompt).text
+
     # Extract the text response
-    details_json = response.result
-    print(details_json)
+    print(response)
 
 def main():
     # Load the PDF file and extract text
-    with pdfplumber.open("invoice.pdf") as pdf:
+    with pdfplumber.open("Invoice.pdf") as pdf:
         first_page = pdf.pages[0]
         invoice_text = first_page.extract_text()
-
-    print("Extracted Text:", invoice_text)
 
     # Pass the extracted text to the function to get the details
     give_details(invoice_text)
