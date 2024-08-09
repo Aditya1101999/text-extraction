@@ -1,6 +1,5 @@
 const express = require('express');
 const multer = require('multer');
-const path = require('path');
 const { extractTextFromPDF, extractTextFromImage, giveDetails } = require('./textExtraction');
 require('dotenv').config();
 
@@ -48,3 +47,4 @@ app.post('/upload', upload.fields([{ name: 'pdf' }, { name: 'image' }]), async (
     }
 });
 
+module.exports = app
