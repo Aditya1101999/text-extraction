@@ -26,6 +26,9 @@
     <script>
         document.querySelector('form').addEventListener('submit', async (e) => {
             e.preventDefault();
+            document.getElementById('pdf-details').textContent = 'Loading PDF details...';
+            document.getElementById('image-details').textContent = 'Loading image details...';
+
             const formData = new FormData(e.target);
             const response = await fetch('/upload', {
                 method: 'POST',

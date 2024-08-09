@@ -44,3 +44,7 @@ pre {
     border-radius: 5px;
     overflow-x: auto;
 }
+.loading {
+    font-style: italic;
+    color: #999;
+}
