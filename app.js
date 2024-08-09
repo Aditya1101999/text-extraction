@@ -5,7 +5,6 @@ const { extractTextFromPDF, extractTextFromImage, giveDetails } = require('./tex
 require('dotenv').config();
 
 const app = express();
-const port = 3000;
 
 const upload = multer({ dest: 'uploads/' });
 
@@ -49,6 +48,3 @@ app.post('/upload', upload.fields([{ name: 'pdf' }, { name: 'image' }]), async (
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-});
